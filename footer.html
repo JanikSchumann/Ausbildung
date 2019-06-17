@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url("./assets/wallpaper.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px;
+      }
+
+      .footer__wrapper {
+        background-color: #144251;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0%;
+      }
+
+      .footer__headline {
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        color: #fff;
+        background-color: #174f62;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .footer__nav-bar {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+      }
+
+      .footer__meta-nav {
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+        flex-wrap: wrap;
+      }
+
+      .footer__link {
+        font-family: Helvetica, sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin: 0px 30px 30px 30px;
+        opacity: 0.3;
+        text-decoration: none;
+      }
+
+      .footer__link--underline {
+        opacity: 1;
+      }
+
+      .footer__link--underline:after {
+        background-color: #fce500;
+        content: "";
+        display: block;
+        height: 3px;
+        margin-left: -1px;
+        margin-top: 3px;
+        transition: all .3s ease-in-out;
+        width: 100%;
+      }
+
+      .footer__link--underline:hover:after {
+        border-radius: 1.5px;
+        height: 14px;
+        margin-top: -8px;
+        width: 100%
+      }
+
+      .footer__to-top {
+        position: absolute;
+        right: 60px;
+        top: -40px;
+        background: #49daf9;
+        width: 50px;
+        height: 80px;
+        border-radius: 25px;
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,.15);
+        cursor: pointer;
+      }
+
+      .footer__arrow-up {
+        font-size: 40px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+      }
+
+      .footer__to-top:hover .footer__arrow-up{
+        top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .footer__wrapper {
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer__wrapper">
+      <div class="footer__to-top">
+        <i class="footer__arrow-up">&#8593;</i>
+      </div>
+      <div class="footer__headline">
+        Ein Programm der Janik.S Group
+      </div>
+      <div class="footer__nav-bar">
+        <a href="#" class="footer__link footer__link--underline">
+          Über StartersX
+        </a>
+        <a href="#" class="footer__link footer__link--underline">
+          Schülerinnen & Schüler
+        </a>
+      </div>
+      <div class="footer__meta-nav">
+        <a href="#" class="footer__link">
+          Impressum
+        </a>
+        <a href="#" class="footer__link">
+          Datenschtz
+        </a>
+        <a href="#" class="footer__link">
+          Cookie-Richtlinien
+        </a>
+        <a href="#" class="footer__link">
+          Allgemeine Nutzungsbedingungen
+        </a>
+        <a href="#" class="footer__link">
+          Lizenshinweise Dritter
+        </a>
+        <a href="#" class="footer__link">
+          Kontakt
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
