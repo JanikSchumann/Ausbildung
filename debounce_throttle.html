@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function debounce(func, wait) {
+        var timeout;
+        return function() {
+          clearTimeout(timeout);
+          timeout = setTimeout(function() {
+            func.apply(this, arguments);
+          }, wait);
+        };
+      };
+
+      function throttle(func, limit) {
+        var inThrottle;
+        return function() {
+          if (!inThrottle) {
+            func.apply(this, arguments);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit)
+          }
+        }
+      }
+
+      window.addEventListener('scroll', debounce(() => {
+         console.log("Debounce!");
+      }, 500));
+
+      window.addEventListener('scroll', throttle(() => {
+         console.log("Throttle!");
+      }, 500));
+
+      window.addEventListener('scroll', throttle(() => {
+         //console.log("Normal!");
+      }));
+    </script>
+    <style>
+    body {
+      height: 2000px;
+    }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
