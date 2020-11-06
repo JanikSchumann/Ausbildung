@@ -1,6 +1,6 @@
 function dotdotdot(input_string, counter) {
    input_string = input_string.substring(0, (counter-3));
-   var i = input_string.length
+   var i = input_string.length-1;
    while (input_string[i] != " "){
      i--;
    }
